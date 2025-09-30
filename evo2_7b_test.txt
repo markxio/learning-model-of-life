@@ -1,0 +1,21 @@
+(venv_python3.11) root@tklaisoo-eidf107-job-tq74r-sxqb7:/workspace/writeable/evo2# python ./test/test_evo2.py --model_name evo2_7b 
+Fetching 4 files: 100%|████████████████████████████████████████████████████████████████████████████████| 4/4 [00:00<00:00, 50382.03it/s]
+Found complete file in repo: evo2_7b.pt
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 32/32 [00:00<00:00, 126.52it/s]
+Extra keys in state_dict: {'blocks.16.mixer.mixer.filter.t', 'blocks.23.mixer.mixer.filter.t', 'blocks.9.mixer.mixer.filter.t', 'blocks.17.mixer.attn._extra_state', 'blocks.10.mixer.attn._extra_state', 'blocks.20.mixer.mixer.filter.t', 'blocks.30.mixer.mixer.filter.t', 'blocks.31.mixer.dense._extra_state', 'blocks.31.mixer.attn._extra_state', 'blocks.27.mixer.mixer.filter.t', 'blocks.10.mixer.dense._extra_state', 'blocks.13.mixer.mixer.filter.t', 'blocks.17.mixer.dense._extra_state', 'blocks.3.mixer.attn._extra_state', 'blocks.24.mixer.attn._extra_state', 'blocks.3.mixer.dense._extra_state', 'blocks.24.mixer.dense._extra_state', 'blocks.6.mixer.mixer.filter.t', 'blocks.2.mixer.mixer.filter.t', 'unembed.weight'}
+/workspace/writeable/evo2/venv_python3.11/lib/python3.11/site-packages/transformer_engine/pytorch/module/base.py:630: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  state = torch.load(state, map_location="cuda")
+/workspace/writeable/evo2/vortex/vortex/model/utils.py:153: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  return torch_load(state, map_location=device)
+
+Sequence Results:
+Sequence 1: Loss = 0.182, Accuracy = 93.53%
+Sequence 2: Loss = 0.354, Accuracy = 86.32%
+Sequence 3: Loss = 0.500, Accuracy = 80.18%
+Sequence 4: Loss = 0.355, Accuracy = 85.36%
+
+Mean Loss: 0.348
+Mean Accuracy: 86.346%
+
+Test Passed! Loss matches expected 0.348
+(venv_python3.11) root@tklaisoo-eidf107-job-tq74r-sxqb7:/workspace/writeable/evo2#
