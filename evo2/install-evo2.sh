@@ -2,8 +2,8 @@
 
 apt-get update
 apt-get install git
-apt install python3.11
-apt install python3.11-venv
+apt-get install python3.11
+apt-get install python3.11-venv
 python3.11 -m venv venv
 source venv/bin/activate
 
@@ -27,4 +27,4 @@ pip uninstall transformer_engine
 pip install transformer_engine[pytorch]==1.13
 
 python ./test/test_evo2.py --model_name evo2_7b
-#python ./test/test_evo2.py --model_name evo2_40b
+python ./test/test_evo2.py --model_name evo2_40b

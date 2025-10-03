@@ -33,9 +33,9 @@ spec:
             value: experiment1
         resources:
            limits:
-            nvidia.com/gpu: 4
-            cpu: 96
-            memory: 512Gi
+            nvidia.com/gpu: 1
+            cpu: 24
+            memory: 256Gi
         volumeMounts:
           - name: workspace
             mountPath: /workspace

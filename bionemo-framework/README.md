@@ -10,7 +10,7 @@ Overview:
 
 ## Get a container up running on kubernetes
 
-Use the job-bionemo.yaml config file to create a container:
+Use the [`job-bionemo.yaml`](job-bionemo.yaml) config file to create a container:
 
 ```
 kubectl create -f job-bionemo.yaml
@@ -22,7 +22,7 @@ Check the container status and get its name:
 kubectl get po
 ```
 
-Confirm the container's status has switched to `running` (might take a while for kubernetes to download the image and set up the container). Then copy the name (something like `tklaisoo-eidf107-job-gtqqw-k2fc6 `) and create a session in the container to "log on":
+Confirm the container's status has switched to `running` (might take a while for kubernetes to download the image and set up the container). Then copy the name (something like `tklaisoo-eidf107-job-gtqqw-k2fc6 `) and create a session in the container:
 
 ```
 kubectl exec -it tklaisoo-eidf107-job-wm9fs-n7g8l -- bash
@@ -50,10 +50,17 @@ The bionemo framework provides two tutorials as starting point, which are provid
 - Finetuning
 - Zeroshot BRCA1 Variant Effect Prediction
 
-We could run these notebooks in interactive mode but alternatively can translate it to python that is executable on the command line. 
+We could run these notebooks in interactive mode, execute the notebooks from command line or alternatively can translate it to python that is executable on the command line. 
 
-<!--- See: https://stackoverflow.com/questions/35545402/how-to-run-an-ipynb-jupyter-notebook-from-terminal -->
+Execute notebooks from command line:
 
+```
+cd examples
+jupyter nbconvert --execute fine-tuning-tutorial.ipynb
+jupyter nbconvert --execute zeroshot_brca1.ipynb
+```
+
+Translate to python using `nbconvert`:
 ```
 cd examples
 jupyter nbconvert --to python fine-tuning-tutorial.ipynb
@@ -62,7 +69,7 @@ jupyter nbconvert --to python zeroshot_brca1.ipynb
 
 If you try to run the generate .py files with e.g., `python fine-tuning-tutorial.py`, python will complain about `get_ipython is undefined`. That's because we have to run the .py files with `ipython fine-tuning-tutorial.py`.
 
-## Available evo2 modles with bionemo
+## Available evo2 modles with the bionemo-framework
 
 Check: https://huggingface.co/arcinstitute
 
@@ -310,10 +317,3 @@ Errors:
 pending...
 
 </details>
-
-
-## Experiment
-
-1. inference: generate USCZ sequences based on ???, test for accuracy
-2. fine-tune on USZC data
-3. inference: compare predictive accuracy to 1. (how to compare generated data? exact match? similarity? conservative/scrict metric vs relaxed threshold metric)
