@@ -22,4 +22,4 @@ Evo2 was pre-trained and fine-tuned using [savanna](https://github.com/Zymrael/s
 
 > is a comprehensive suite of programming tools, libraries, and models designed for computational drug discovery
 
-which includes `bionemo-evo2`, a subpackage building on Megatron-LM parallelism and NeMo2 algorithms. More information on running `bionemo-evo2` are provided in the [`bionemo-evo2`] directory.
+which includes `bionemo-evo2`, a subpackage building on Megatron-LM parallelism and NeMo2 algorithms. More information on running `bionemo-evo2` are provided in the [`bionemo-evo2`](bionemo-framework/) directory.
