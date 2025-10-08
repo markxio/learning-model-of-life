@@ -47,12 +47,12 @@ Install jupyter notebook
 pip install notebook
 ```
 
-Run the [generation_notebook.ipynb](https://github.com/markxio/evo2/notebooks/generation/generation_notebook.ipynb) notebook from the command line and convert it to html. The output is provided in [generation_notebook.html](output/generation_notebook.html)
+Run the [generation_notebook.ipynb](https://github.com/markxio/evo2/notebooks/generation/generation_notebook.ipynb) notebook from the command line and convert it to html. The output is provided in [generation_notebook.md](output/generation_notebook.md)
 ```
-jupyter nbconvert --to html --execute generation_notebook.ipynb
+jupyter nbconvert --to markdown --execute generation_notebook.ipynb
 ```
 
-Run the [brca1_zero_shot_vep.ipynb](https://github.com/markxio/evo2/notebooks/brca1/brca1_zero_shot_vep.ipynb) notebook with the following command. We require `--ExecutePreprocessor.kernel_name=python3` as the default jupyter notebook is configured to use a kernel called `evo2-release` which is not included in our environment. The output can be found in [brca1_zero_shot_vep.html](output/brca1_zero_shot_vep.html).
+Run the [brca1_zero_shot_vep.ipynb](https://github.com/markxio/evo2/notebooks/brca1/brca1_zero_shot_vep.ipynb) notebook with the following command. We require `--ExecutePreprocessor.kernel_name=python3` as the default jupyter notebook is configured to use a kernel called `evo2-release` which is not included in our environment. The output can be found in [brca1_zero_shot_vep.md](output/brca1_zero_shot_vep.md).
 ```
-jupyter nbconvert --to html --execute brca1_zero_shot_vep.ipynb --ExecutePreprocessor.kernel_name=python3
+jupyter nbconvert --to markdown --execute brca1_zero_shot_vep.ipynb --ExecutePreprocessor.kernel_name=python3
 ```
