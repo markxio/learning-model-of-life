@@ -47,7 +47,8 @@ spec:
             readOnly: true
       nodeSelector:
         #nvidia.com/gpu.product: NVIDIA-A100-SXM4-80GB
-        nvidia.com/gpu.product: NVIDIA-H200
+        #nvidia.com/gpu.product: NVIDIA-H200
+        nvidia.com/gpu.product: NVIDIA-H100-80GB-HBM3
       volumes:
         - name: workspace
           nfs:

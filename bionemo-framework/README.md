@@ -44,23 +44,31 @@ cd bionemo-framework/sub-packages/bionemo-evo2
 - preprocess once: from text-based sequences to binary tokens compatible with evo2 (padding shorter sequences/append end-of-sequence tokens)
 - evo2 preprocessing script: https://github.com/Zymrael/savanna/blob/main/tools/preprocess_data.py
 
-## Converting examples as .ipynb notebooks to ipython
+## Fine-tuning bionemo-evo2
 
-The bionemo framework provides two tutorials as starting point, which are provided as .ipynb:
-- Finetuning
-- Zeroshot BRCA1 Variant Effect Prediction
+Run the [fine-tuning-tutorial.ipynb](https://github.com/markxio/bionemo-framework/blob/35d24220422fa85d6cfbb7678b08c0c3f8017b43/sub-packages/bionemo-evo2/examples/fine-tuning-tutorial.ipynb) notebook from the command line and convert it to markdown. The output is provided in [fine-tuning-tutorial.md](output/fine-tuning-tutorial.md)
+```
+jupyter nbconvert --to markdown --execute fine-tuning-tutorial.ipynb
+```
 
-We could run these notebooks in interactive mode, execute the notebooks from command line or alternatively can translate it to python that is executable on the command line. 
+## Zero-shot prediction of BRCA1 variant effects
 
-Execute notebooks from command line:
+Run the [zeroshot_brca1.ipynb](https://github.com/markxio/bionemo-framework/blob/35d24220422fa85d6cfbb7678b08c0c3f8017b43/sub-packages/bionemo-evo2/examples/zeroshot_brca1.ipynb) notebook with the following command. The output can be found in [zeroshot_brca1.md](output/zeroshot_brca1.md).
+```
+jupyter nbconvert --to markdown --execute zeroshot_brca1.ipynb
+```
 
+## Alternatively translate notebooks to python
+ 
 ```
 cd examples
-jupyter nbconvert --execute fine-tuning-tutorial.ipynb
-jupyter nbconvert --execute zeroshot_brca1.ipynb
+jupyter nbconvert --to markdown --execute fine-tuning-tutorial.ipynb
+jupyter nbconvert --to markdown --execute zeroshot_brca1.ipynb
 ```
 
-Translate to python using `nbconvert`:
+We could run these notebooks in interactive mode, execute the notebooks from command line or alternatively can translate it to python that is executable on the command line.
+
+Translate to python using nbconvert:
 ```
 cd examples
 jupyter nbconvert --to python fine-tuning-tutorial.ipynb
